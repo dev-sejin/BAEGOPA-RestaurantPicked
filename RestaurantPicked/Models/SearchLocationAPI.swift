@@ -29,6 +29,9 @@ final class SearchLocationAPI {
     
     // MARK: - Properties
     
+    /// completion 네트워킹 타입 생성
+    typealias Networking = (SearchLocation) -> Void
+    
     /// Header 필드: Client ID
     private let headerID = "X-Naver-Client-Id"
     
@@ -53,19 +56,18 @@ final class SearchLocationAPI {
         /// URL 문자열 반환
         return "\(baseURL)?display=\(display)&start=\(start)&sort=\(sort)&query="
     }
-
-    var result: SearchLocation?
+    
     
     
     // MARK: - Method
     
-    /// 네이버 지역 검색 결과를 요청합니다.
+    /// Request 요청 객체를 생성 후 반환합니다.
     ///
-    /// - Parameter searchQuery: 검색어 입력
-    func requestLocation(searchQuery: String) {
+    /// - Parameter query: 변환 할 검색어 쿼리
+    private func createRequest(query: String) -> DataRequest {
         
         /// 검색어 쿼리를 이용한 최종 URL 생성
-        let completeURL = paramURL + searchQuery.safeURL
+        let completeURL = paramURL + query.safeURL
         
         /// HTTPHeaders
         let header: HTTPHeaders = [
@@ -76,8 +78,16 @@ final class SearchLocationAPI {
         /// Request 요청 객체 생성
         let request = AF.request(completeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header)
         
+        return request
+    }
+    
+    /// 네이버 지역 검색 결과를 요청합니다.
+    ///
+    /// - Parameter searchQuery: 검색어 입력
+    func requestLocation(searchQuery: String, completion: @escaping Networking) {
+        
         /// Request 실행
-        request
+        createRequest(query: searchQuery)
             .validate(statusCode: 200..<500)
             .responseDecodable(of: SearchLocation.self) { response in
                 
@@ -89,7 +99,7 @@ final class SearchLocationAPI {
                     /// 네트워킹 성공
                 case .success(let searchLocation):
                     print("Status: \(statusCode) - SearchLocationAPI 네트워킹에 성공했습니다.")
-                    self.result = searchLocation
+                    completion(searchLocation)
                     
                     /// 네트워킹 실패
                 case .failure(let error):

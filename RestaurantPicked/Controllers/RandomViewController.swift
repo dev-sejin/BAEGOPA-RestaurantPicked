@@ -7,10 +7,7 @@
 
 import UIKit
 
-class RandomViewController: UIViewController {
-    
-    // SearchLocationAPI 테스트용
-    private let searchLocationAPI = SearchLocationAPI.shared
+final class RandomViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +17,7 @@ class RandomViewController: UIViewController {
     
     // SearchLocationAPI 테스트용
     func testSearchLocationAPI() {
-        searchLocationAPI.requestLocation(searchQuery: "서울특별시 강남 맛집")
-        print(searchLocationAPI.result)
+        SearchLocationAPI.shared.requestLocation(searchQuery: "서울특별시 강남 맛집") { print($0) }
     }
 }
 
