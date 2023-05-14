@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0751131D2A1088ED002CBED9 /* SearchLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751131C2A1088ED002CBED9 /* SearchLocation.swift */; };
 		62A1C61D2A0E56B000156986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C61C2A0E56B000156986 /* AppDelegate.swift */; };
 		62A1C61F2A0E56B000156986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C61E2A0E56B000156986 /* SceneDelegate.swift */; };
 		62A1C6212A0E56B000156986 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C6202A0E56B000156986 /* RandomViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0751131C2A1088ED002CBED9 /* SearchLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocation.swift; sourceTree = "<group>"; };
 		62A1C6192A0E56B000156986 /* RestaurantPicked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantPicked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A1C61C2A0E56B000156986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62A1C61E2A0E56B000156986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		62A1C6392A0E68B900156986 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0751131C2A1088ED002CBED9 /* SearchLocation.swift */,
 				62A1C63E2A0E694600156986 /* SearchLocationAPI.swift */,
 				62A1C6402A0E695500156986 /* ReverseGeocoding.swift */,
 			);
@@ -206,6 +209,7 @@
 				62A1C6212A0E56B000156986 /* RandomViewController.swift in Sources */,
 				62A1C61D2A0E56B000156986 /* AppDelegate.swift in Sources */,
 				62A1C64D2A0E69E200156986 /* Detail.swift in Sources */,
+				0751131D2A1088ED002CBED9 /* SearchLocation.swift in Sources */,
 				62A1C6452A0E69AC00156986 /* Random.swift in Sources */,
 				62A1C63F2A0E694600156986 /* SearchLocationAPI.swift in Sources */,
 				62A1C6502A0E6A2B00156986 /* Extension.swift in Sources */,
