@@ -15,7 +15,7 @@
 		62A1C6312A0E659D00156986 /* APIKEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62A1C6302A0E659D00156986 /* APIKEY.plist */; };
 		62A1C6342A0E67E400156986 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 62A1C6332A0E67E400156986 /* Alamofire */; };
 		62A1C6372A0E683300156986 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 62A1C6362A0E683300156986 /* SnapKit */; };
-		62A1C63F2A0E694600156986 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C63E2A0E694600156986 /* Location.swift */; };
+		62A1C63F2A0E694600156986 /* SearchLocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C63E2A0E694600156986 /* SearchLocationAPI.swift */; };
 		62A1C6412A0E695500156986 /* ReverseGeocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C6402A0E695500156986 /* ReverseGeocoding.swift */; };
 		62A1C6452A0E69AC00156986 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C6442A0E69AC00156986 /* Random.swift */; };
 		62A1C6492A0E69C100156986 /* HalfRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C6482A0E69C100156986 /* HalfRandom.swift */; };
@@ -33,7 +33,7 @@
 		62A1C6282A0E56B000156986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62A1C62A2A0E56B000156986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62A1C6302A0E659D00156986 /* APIKEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKEY.plist; sourceTree = "<group>"; };
-		62A1C63E2A0E694600156986 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		62A1C63E2A0E694600156986 /* SearchLocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationAPI.swift; sourceTree = "<group>"; };
 		62A1C6402A0E695500156986 /* ReverseGeocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoding.swift; sourceTree = "<group>"; };
 		62A1C6442A0E69AC00156986 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		62A1C6482A0E69C100156986 /* HalfRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfRandom.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		62A1C6392A0E68B900156986 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				62A1C63E2A0E694600156986 /* Location.swift */,
+				62A1C63E2A0E694600156986 /* SearchLocationAPI.swift */,
 				62A1C6402A0E695500156986 /* ReverseGeocoding.swift */,
 			);
 			path = Models;
@@ -207,7 +207,7 @@
 				62A1C61D2A0E56B000156986 /* AppDelegate.swift in Sources */,
 				62A1C64D2A0E69E200156986 /* Detail.swift in Sources */,
 				62A1C6452A0E69AC00156986 /* Random.swift in Sources */,
-				62A1C63F2A0E694600156986 /* Location.swift in Sources */,
+				62A1C63F2A0E694600156986 /* SearchLocationAPI.swift in Sources */,
 				62A1C6502A0E6A2B00156986 /* Extension.swift in Sources */,
 				62A1C61F2A0E56B000156986 /* SceneDelegate.swift in Sources */,
 				62A1C6412A0E695500156986 /* ReverseGeocoding.swift in Sources */,
