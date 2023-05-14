@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0751131D2A1088ED002CBED9 /* SearchLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751131C2A1088ED002CBED9 /* SearchLocation.swift */; };
+		0751131F2A108C19002CBED9 /* APIKEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0751131E2A108C19002CBED9 /* APIKEY.plist */; };
 		62A1C61D2A0E56B000156986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C61C2A0E56B000156986 /* AppDelegate.swift */; };
 		62A1C61F2A0E56B000156986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C61E2A0E56B000156986 /* SceneDelegate.swift */; };
 		62A1C6212A0E56B000156986 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C6202A0E56B000156986 /* RandomViewController.swift */; };
 		62A1C6262A0E56B000156986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A1C6252A0E56B000156986 /* Assets.xcassets */; };
 		62A1C6292A0E56B000156986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A1C6272A0E56B000156986 /* LaunchScreen.storyboard */; };
-		62A1C6312A0E659D00156986 /* APIKEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62A1C6302A0E659D00156986 /* APIKEY.plist */; };
 		62A1C6342A0E67E400156986 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 62A1C6332A0E67E400156986 /* Alamofire */; };
 		62A1C6372A0E683300156986 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 62A1C6362A0E683300156986 /* SnapKit */; };
 		62A1C63F2A0E694600156986 /* SearchLocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C63E2A0E694600156986 /* SearchLocationAPI.swift */; };
@@ -27,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		0751131C2A1088ED002CBED9 /* SearchLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocation.swift; sourceTree = "<group>"; };
+		0751131E2A108C19002CBED9 /* APIKEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKEY.plist; sourceTree = "<group>"; };
 		62A1C6192A0E56B000156986 /* RestaurantPicked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantPicked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A1C61C2A0E56B000156986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62A1C61E2A0E56B000156986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		62A1C6252A0E56B000156986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62A1C6282A0E56B000156986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62A1C62A2A0E56B000156986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62A1C6302A0E659D00156986 /* APIKEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKEY.plist; sourceTree = "<group>"; };
 		62A1C63E2A0E694600156986 /* SearchLocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationAPI.swift; sourceTree = "<group>"; };
 		62A1C6402A0E695500156986 /* ReverseGeocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoding.swift; sourceTree = "<group>"; };
 		62A1C6442A0E69AC00156986 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			children = (
 				62A1C61C2A0E56B000156986 /* AppDelegate.swift */,
 				62A1C61E2A0E56B000156986 /* SceneDelegate.swift */,
-				62A1C6302A0E659D00156986 /* APIKEY.plist */,
+				0751131E2A108C19002CBED9 /* APIKEY.plist */,
 				62A1C6252A0E56B000156986 /* Assets.xcassets */,
 				62A1C6272A0E56B000156986 /* LaunchScreen.storyboard */,
 				62A1C62A2A0E56B000156986 /* Info.plist */,
@@ -195,7 +195,7 @@
 			files = (
 				62A1C6292A0E56B000156986 /* LaunchScreen.storyboard in Resources */,
 				62A1C6262A0E56B000156986 /* Assets.xcassets in Resources */,
-				62A1C6312A0E659D00156986 /* APIKEY.plist in Resources */,
+				0751131F2A108C19002CBED9 /* APIKEY.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
