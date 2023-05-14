@@ -9,5 +9,5 @@ import Foundation
 
 /// 네이버 지역 검색 API 관리 클래스입니다.
 final class SearchLocationAPI {
-    
+    // 테스트용 커밋
 }
