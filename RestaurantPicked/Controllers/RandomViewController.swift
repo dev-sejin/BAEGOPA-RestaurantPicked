@@ -20,7 +20,8 @@ class RandomViewController: UIViewController {
     
     // SearchLocationAPI 테스트용
     func testSearchLocationAPI() {
-        searchLocationAPI.requestLocation()
+        searchLocationAPI.requestLocation(searchQuery: "서울특별시 강남 맛집")
+        print(searchLocationAPI.result)
     }
 }
 

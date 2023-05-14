@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0751131D2A1088ED002CBED9 /* SearchLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751131C2A1088ED002CBED9 /* SearchLocation.swift */; };
 		0751131F2A108C19002CBED9 /* APIKEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0751131E2A108C19002CBED9 /* APIKEY.plist */; };
+		075113232A10A190002CBED9 /* SafeURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075113222A10A190002CBED9 /* SafeURL.swift */; };
 		62A1C61D2A0E56B000156986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C61C2A0E56B000156986 /* AppDelegate.swift */; };
 		62A1C61F2A0E56B000156986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C61E2A0E56B000156986 /* SceneDelegate.swift */; };
 		62A1C6212A0E56B000156986 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C6202A0E56B000156986 /* RandomViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		0751131C2A1088ED002CBED9 /* SearchLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocation.swift; sourceTree = "<group>"; };
 		0751131E2A108C19002CBED9 /* APIKEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKEY.plist; sourceTree = "<group>"; };
+		075113222A10A190002CBED9 /* SafeURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeURL.swift; sourceTree = "<group>"; };
 		62A1C6192A0E56B000156986 /* RestaurantPicked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantPicked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A1C61C2A0E56B000156986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62A1C61E2A0E56B000156986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				62A1C64F2A0E6A2B00156986 /* Extension.swift */,
+				075113222A10A190002CBED9 /* SafeURL.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				62A1C6212A0E56B000156986 /* RandomViewController.swift in Sources */,
 				62A1C61D2A0E56B000156986 /* AppDelegate.swift in Sources */,
+				075113232A10A190002CBED9 /* SafeURL.swift in Sources */,
 				62A1C64D2A0E69E200156986 /* Detail.swift in Sources */,
 				0751131D2A1088ED002CBED9 /* SearchLocation.swift in Sources */,
 				62A1C6452A0E69AC00156986 /* Random.swift in Sources */,
