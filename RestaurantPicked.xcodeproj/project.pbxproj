@@ -24,6 +24,9 @@
 		62A1C64B2A0E69C800156986 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C64A2A0E69C800156986 /* Result.swift */; };
 		62A1C64D2A0E69E200156986 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C64C2A0E69E200156986 /* Detail.swift */; };
 		62A1C6502A0E6A2B00156986 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C64F2A0E6A2B00156986 /* Extension.swift */; };
+		62C6BAA12A11E93200957584 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6BAA02A11E93200957584 /* MainTabBarController.swift */; };
+		62C6BAA32A11E97600957584 /* HalfRandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6BAA22A11E97600957584 /* HalfRandomViewController.swift */; };
+		62C6BAA52A11E98B00957584 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6BAA42A11E98B00957584 /* RestaurantDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		62A1C64A2A0E69C800156986 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		62A1C64C2A0E69E200156986 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		62A1C64F2A0E6A2B00156986 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		62C6BAA02A11E93200957584 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		62C6BAA22A11E97600957584 /* HalfRandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfRandomViewController.swift; sourceTree = "<group>"; };
+		62C6BAA42A11E98B00957584 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +122,10 @@
 		62A1C63B2A0E68CF00156986 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				62C6BAA02A11E93200957584 /* MainTabBarController.swift */,
 				62A1C6202A0E56B000156986 /* RandomViewController.swift */,
+				62C6BAA22A11E97600957584 /* HalfRandomViewController.swift */,
+				62C6BAA42A11E98B00957584 /* RestaurantDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -209,13 +218,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62C6BAA32A11E97600957584 /* HalfRandomViewController.swift in Sources */,
 				62A1C6212A0E56B000156986 /* RandomViewController.swift in Sources */,
 				62A1C61D2A0E56B000156986 /* AppDelegate.swift in Sources */,
 				075113232A10A190002CBED9 /* SafeURL.swift in Sources */,
 				62A1C64D2A0E69E200156986 /* Detail.swift in Sources */,
 				0751131D2A1088ED002CBED9 /* SearchLocation.swift in Sources */,
 				62A1C6452A0E69AC00156986 /* Random.swift in Sources */,
+				62C6BAA52A11E98B00957584 /* RestaurantDetailViewController.swift in Sources */,
 				62A1C63F2A0E694600156986 /* SearchLocationAPI.swift in Sources */,
+				62C6BAA12A11E93200957584 /* MainTabBarController.swift in Sources */,
 				62A1C6502A0E6A2B00156986 /* Extension.swift in Sources */,
 				62A1C61F2A0E56B000156986 /* SceneDelegate.swift in Sources */,
 				62A1C6412A0E695500156986 /* ReverseGeocoding.swift in Sources */,
@@ -359,6 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4VVWK4VBS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantPicked/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -385,6 +398,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4VVWK4VBS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantPicked/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
