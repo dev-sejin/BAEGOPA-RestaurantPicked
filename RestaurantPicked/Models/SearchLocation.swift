@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// test
 /// 네이버 지역 검색 구조체입니다.
 struct SearchLocation: Codable {
     
