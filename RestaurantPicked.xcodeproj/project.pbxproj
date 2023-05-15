@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0751131D2A1088ED002CBED9 /* SearchLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751131C2A1088ED002CBED9 /* SearchLocation.swift */; };
-		0751131F2A108C19002CBED9 /* APIKEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0751131E2A108C19002CBED9 /* APIKEY.plist */; };
 		075113232A10A190002CBED9 /* SafeURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075113222A10A190002CBED9 /* SafeURL.swift */; };
+		4D960CF12A113F5900F54D4B /* APIKEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D960CF02A113F5900F54D4B /* APIKEY.plist */; };
+		4D960CF32A11400D00F54D4B /* ReverseGeocodingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D960CF22A11400D00F54D4B /* ReverseGeocodingAPI.swift */; };
 		62A1C61D2A0E56B000156986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C61C2A0E56B000156986 /* AppDelegate.swift */; };
 		62A1C61F2A0E56B000156986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C61E2A0E56B000156986 /* SceneDelegate.swift */; };
 		62A1C6212A0E56B000156986 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C6202A0E56B000156986 /* RandomViewController.swift */; };
@@ -28,8 +29,9 @@
 
 /* Begin PBXFileReference section */
 		0751131C2A1088ED002CBED9 /* SearchLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocation.swift; sourceTree = "<group>"; };
-		0751131E2A108C19002CBED9 /* APIKEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKEY.plist; sourceTree = "<group>"; };
 		075113222A10A190002CBED9 /* SafeURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeURL.swift; sourceTree = "<group>"; };
+		4D960CF02A113F5900F54D4B /* APIKEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKEY.plist; sourceTree = "<group>"; };
+		4D960CF22A11400D00F54D4B /* ReverseGeocodingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingAPI.swift; sourceTree = "<group>"; };
 		62A1C6192A0E56B000156986 /* RestaurantPicked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantPicked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A1C61C2A0E56B000156986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62A1C61E2A0E56B000156986 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 			children = (
 				62A1C61C2A0E56B000156986 /* AppDelegate.swift */,
 				62A1C61E2A0E56B000156986 /* SceneDelegate.swift */,
-				0751131E2A108C19002CBED9 /* APIKEY.plist */,
+				4D960CF02A113F5900F54D4B /* APIKEY.plist */,
 				62A1C6252A0E56B000156986 /* Assets.xcassets */,
 				62A1C6272A0E56B000156986 /* LaunchScreen.storyboard */,
 				62A1C62A2A0E56B000156986 /* Info.plist */,
@@ -98,6 +100,7 @@
 				0751131C2A1088ED002CBED9 /* SearchLocation.swift */,
 				62A1C63E2A0E694600156986 /* SearchLocationAPI.swift */,
 				62A1C6402A0E695500156986 /* ReverseGeocoding.swift */,
+				4D960CF22A11400D00F54D4B /* ReverseGeocodingAPI.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,7 +201,7 @@
 			files = (
 				62A1C6292A0E56B000156986 /* LaunchScreen.storyboard in Resources */,
 				62A1C6262A0E56B000156986 /* Assets.xcassets in Resources */,
-				0751131F2A108C19002CBED9 /* APIKEY.plist in Resources */,
+				4D960CF12A113F5900F54D4B /* APIKEY.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62A1C6212A0E56B000156986 /* RandomViewController.swift in Sources */,
+				4D960CF32A11400D00F54D4B /* ReverseGeocodingAPI.swift in Sources */,
 				62A1C61D2A0E56B000156986 /* AppDelegate.swift in Sources */,
 				075113232A10A190002CBED9 /* SafeURL.swift in Sources */,
 				62A1C64D2A0E69E200156986 /* Detail.swift in Sources */,
