@@ -134,6 +134,8 @@ final class SearchLocationAPI {
     func getRandomPlace() -> LocationItem? {
         guard let items = searchResult?.items else {
             return nil }
+        
+        /// 랜덤 장소 생성
         let randomNumber = Int.random(in: 0..<items.count)
         let randomItem = items[randomNumber]
         randomLocation = randomItem
@@ -141,8 +143,17 @@ final class SearchLocationAPI {
     }
     
     /// 네이버 지역 검색 결과를 이용해 구한 랜덤 장소의
-    /// TM128 좌표계를 변환 후 WGS84 좌표계로 반환합니다.
+    /// TM128 좌표계를 변환 후 WGS84(위도, 경도) 좌표계로 반환합니다.
     func getSearchResultCoordinate() -> CLLocationCoordinate2D? {
-        return CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        guard let item = randomLocation,
+              let x = Double(item.mapx),
+              let y = Double(item.mapy) else { return nil }
+        
+        /// tm128 객체 생성
+        let tm128 = NMGTm128(x: x, y: y)
+        
+        /// WGS84(위도, 경도) 객체 생성 및 반환
+        let wgs84 = tm128.toLatLng()
+        return CLLocationCoordinate2D(latitude: wgs84.lat, longitude: wgs84.lng)
     }
 }

@@ -32,9 +32,9 @@ final class RandomViewController: UIViewController {
                   let random = self.searchLocationAPI.getRandomPlace(),
                   let coordinate = self.searchLocationAPI.getSearchResultCoordinate()
             else { return }
-            print(result)
-            print(random)
-            print(coordinate)
+            print("검색 결과: \(result)\n----------")
+            print("랜덤장소: \(random.title)\n----------")
+            print("랜덤 장소 좌표: \(coordinate)\n----------")
         }
     }
     
