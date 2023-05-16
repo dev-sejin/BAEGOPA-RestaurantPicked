@@ -43,6 +43,9 @@ final class SearchLocationAPI {
     /// JSON 타입 반환 요청 기본 URL
     private let baseURL = "https://openapi.naver.com/v1/search/local.json"
     
+    /// 네이버 검색 WebView 기본 URL
+    private let webViewURL = "https://m.search.naver.com/search.naver?sm=tab_hty.top&where=m&query="
+    
     /// 기본 파라미터 적용 URL
     private var paramURL: String {
         
@@ -140,6 +143,13 @@ final class SearchLocationAPI {
         let randomItem = items[randomNumber]
         randomLocation = randomItem
         return randomItem
+    }
+    
+    /// 네이버 지역 검색 결과를 이용해 구한 랜덤 장소의
+    /// 웹 검색 결과 URL 주소를 반환합니다.
+    func getRandomplaceWebViewURLString() -> String? {
+        guard let title = randomLocation?.title else { return nil }
+        return webViewURL + title.safeURL
     }
     
     /// 네이버 지역 검색 결과를 이용해 구한 랜덤 장소의
