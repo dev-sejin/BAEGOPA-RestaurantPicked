@@ -18,7 +18,7 @@ final class RandomViewController: UIViewController {
         self.view.backgroundColor = .white
         
         testSearchLocationAPI()
-        
+        testReverseGeocodingAPI()
         
         setupButton()
         setupButtonConstraints()
@@ -38,6 +38,11 @@ final class RandomViewController: UIViewController {
             print("랜덤 장소 좌표: \(coordinate)\n----------")
             print("WebView URL: \(url)\n----------")
         }
+    }
+    
+    // ReverseGeocodingAPI 테스트용
+    func testReverseGeocodingAPI() {
+        ReverseGeocodingAPI.shared.getDataFromAPI(coord: "127,36") { print($0.results) }
     }
     
     private func setupButton() {
