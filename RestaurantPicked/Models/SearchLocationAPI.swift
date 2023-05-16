@@ -57,9 +57,12 @@ final class SearchLocationAPI {
         return "\(baseURL)?display=\(display)&start=\(start)&sort=\(sort)&query="
     }
     
+    /// 네이버 지역 검색 결과
+    private var searchResult: SearchLocation?
     
     
-    // MARK: - Method
+    
+    // MARK: - Networking Method
     
     /// Request 요청 객체를 생성 후 반환합니다.
     ///
@@ -99,6 +102,7 @@ final class SearchLocationAPI {
                     /// 네트워킹 성공
                 case .success(let searchLocation):
                     print("Status: \(statusCode) - SearchLocationAPI 네트워킹에 성공했습니다.")
+                    self.searchResult = searchLocation
                     completion(searchLocation)
                     
                     /// 네트워킹 실패
@@ -107,5 +111,15 @@ final class SearchLocationAPI {
                     print(error.localizedDescription)
                 }
             }
+    }
+    
+    
+    
+    // MARK: - CRUD Method
+    
+    /// 네이버 지역 검색 결과를 반환합니다.
+    func getSearchResult() -> SearchLocation? {
+        guard let result = searchResult else { return nil }
+        return result
     }
 }

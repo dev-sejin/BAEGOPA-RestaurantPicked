@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0751131D2A1088ED002CBED9 /* SearchLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751131C2A1088ED002CBED9 /* SearchLocation.swift */; };
 		075113232A10A190002CBED9 /* SafeURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075113222A10A190002CBED9 /* SafeURL.swift */; };
-		4D960CF12A113F5900F54D4B /* APIKEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D960CF02A113F5900F54D4B /* APIKEY.plist */; };
+		075D7AF22A13028D002383A9 /* APIKEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = 075D7AF12A13028D002383A9 /* APIKEY.plist */; };
 		4D960CF32A11400D00F54D4B /* ReverseGeocodingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D960CF22A11400D00F54D4B /* ReverseGeocodingAPI.swift */; };
 		62A1C61D2A0E56B000156986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C61C2A0E56B000156986 /* AppDelegate.swift */; };
 		62A1C61F2A0E56B000156986 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C61E2A0E56B000156986 /* SceneDelegate.swift */; };
@@ -33,7 +33,7 @@
 /* Begin PBXFileReference section */
 		0751131C2A1088ED002CBED9 /* SearchLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocation.swift; sourceTree = "<group>"; };
 		075113222A10A190002CBED9 /* SafeURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeURL.swift; sourceTree = "<group>"; };
-		4D960CF02A113F5900F54D4B /* APIKEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKEY.plist; sourceTree = "<group>"; };
+		075D7AF12A13028D002383A9 /* APIKEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKEY.plist; sourceTree = "<group>"; };
 		4D960CF22A11400D00F54D4B /* ReverseGeocodingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingAPI.swift; sourceTree = "<group>"; };
 		62A1C6192A0E56B000156986 /* RestaurantPicked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantPicked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A1C61C2A0E56B000156986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 			children = (
 				62A1C61C2A0E56B000156986 /* AppDelegate.swift */,
 				62A1C61E2A0E56B000156986 /* SceneDelegate.swift */,
-				4D960CF02A113F5900F54D4B /* APIKEY.plist */,
+				075D7AF12A13028D002383A9 /* APIKEY.plist */,
 				62A1C6252A0E56B000156986 /* Assets.xcassets */,
 				62A1C6272A0E56B000156986 /* LaunchScreen.storyboard */,
 				62A1C62A2A0E56B000156986 /* Info.plist */,
@@ -210,7 +210,7 @@
 			files = (
 				62A1C6292A0E56B000156986 /* LaunchScreen.storyboard in Resources */,
 				62A1C6262A0E56B000156986 /* Assets.xcassets in Resources */,
-				4D960CF12A113F5900F54D4B /* APIKEY.plist in Resources */,
+				075D7AF22A13028D002383A9 /* APIKEY.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
