@@ -155,7 +155,6 @@
 				14C6310D9A97AB3835DDD319 /* Pods-RestaurantPicked.debug.xcconfig */,
 				1E1B170F19C2F08351AF141D /* Pods-RestaurantPicked.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -218,8 +217,8 @@
 			);
 			mainGroup = 62A1C6102A0E56B000156986;
 			packageReferences = (
-				62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
-				62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit.git" */,
+				62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 62A1C61A2A0E56B000156986 /* Products */;
 			projectDirPath = "";
@@ -445,7 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D4VVWK4VBS;
+				DEVELOPMENT_TEAM = 5566XK43XC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantPicked/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -473,7 +472,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D4VVWK4VBS;
+				DEVELOPMENT_TEAM = 5566XK43XC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantPicked/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -517,7 +516,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -525,7 +524,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit.git" */ = {
+		62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -538,12 +537,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		62A1C6332A0E67E400156986 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		62A1C6362A0E683300156986 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit.git" */;
+			package = 62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

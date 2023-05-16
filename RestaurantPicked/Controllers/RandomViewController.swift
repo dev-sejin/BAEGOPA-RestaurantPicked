@@ -42,7 +42,10 @@ final class RandomViewController: UIViewController {
     
     // ReverseGeocodingAPI 테스트용
     func testReverseGeocodingAPI() {
-        ReverseGeocodingAPI.shared.getDataFromAPI(coord: "127,36") { print($0.results) }
+        ReverseGeocodingAPI.shared.getDataFromAPI(coord: "127,36") {
+            let geoCoding = "\($0.results[0].region.area1.name) \($0.results[0].region.area2.name) \($0.results[0].region.area3.name)"
+            print(geoCoding)
+        }
     }
     
     private func setupButton() {
