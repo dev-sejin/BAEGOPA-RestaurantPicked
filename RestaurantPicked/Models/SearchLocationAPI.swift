@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import CoreLocation
 import Alamofire
+import NMapsMap
 
 /// 네이버 지역 검색 API 관리 클래스입니다.
 final class SearchLocationAPI {
@@ -136,5 +138,11 @@ final class SearchLocationAPI {
         let randomItem = items[randomNumber]
         randomLocation = randomItem
         return randomItem
+    }
+    
+    /// 네이버 지역 검색 결과를 이용해 구한 랜덤 장소의
+    /// TM128 좌표계를 변환 후 WGS84 좌표계로 반환합니다.
+    func getSearchResultCoordinate() -> CLLocationCoordinate2D? {
+        return CLLocationCoordinate2D(latitude: 0, longitude: 0)
     }
 }

@@ -28,12 +28,15 @@
 		62C6BAA12A11E93200957584 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6BAA02A11E93200957584 /* MainTabBarController.swift */; };
 		62C6BAA32A11E97600957584 /* HalfRandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6BAA22A11E97600957584 /* HalfRandomViewController.swift */; };
 		62C6BAA52A11E98B00957584 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6BAA42A11E98B00957584 /* RestaurantDetailViewController.swift */; };
+		F217541F7C0BBA1F9E8491C5 /* Pods_RestaurantPicked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8B9FB560477E6261E7D1E8 /* Pods_RestaurantPicked.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0751131C2A1088ED002CBED9 /* SearchLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocation.swift; sourceTree = "<group>"; };
 		075113222A10A190002CBED9 /* SafeURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeURL.swift; sourceTree = "<group>"; };
 		075D7AF12A13028D002383A9 /* APIKEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKEY.plist; sourceTree = "<group>"; };
+		14C6310D9A97AB3835DDD319 /* Pods-RestaurantPicked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantPicked.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantPicked/Pods-RestaurantPicked.debug.xcconfig"; sourceTree = "<group>"; };
+		1E1B170F19C2F08351AF141D /* Pods-RestaurantPicked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantPicked.release.xcconfig"; path = "Target Support Files/Pods-RestaurantPicked/Pods-RestaurantPicked.release.xcconfig"; sourceTree = "<group>"; };
 		4D960CF22A11400D00F54D4B /* ReverseGeocodingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingAPI.swift; sourceTree = "<group>"; };
 		62A1C6192A0E56B000156986 /* RestaurantPicked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantPicked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A1C61C2A0E56B000156986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		62C6BAA02A11E93200957584 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		62C6BAA22A11E97600957584 /* HalfRandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfRandomViewController.swift; sourceTree = "<group>"; };
 		62C6BAA42A11E98B00957584 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		9B8B9FB560477E6261E7D1E8 /* Pods_RestaurantPicked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantPicked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			files = (
 				62A1C6342A0E67E400156986 /* Alamofire in Frameworks */,
 				62A1C6372A0E683300156986 /* SnapKit in Frameworks */,
+				F217541F7C0BBA1F9E8491C5 /* Pods_RestaurantPicked.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,8 @@
 			children = (
 				62A1C61B2A0E56B000156986 /* RestaurantPicked */,
 				62A1C61A2A0E56B000156986 /* Products */,
+				72DC6831FAF8C8EBEF945042 /* Pods */,
+				F4838797F70465DC766E5DDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +149,24 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		72DC6831FAF8C8EBEF945042 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14C6310D9A97AB3835DDD319 /* Pods-RestaurantPicked.debug.xcconfig */,
+				1E1B170F19C2F08351AF141D /* Pods-RestaurantPicked.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F4838797F70465DC766E5DDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B8B9FB560477E6261E7D1E8 /* Pods_RestaurantPicked.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62A1C62D2A0E56B000156986 /* Build configuration list for PBXNativeTarget "RestaurantPicked" */;
 			buildPhases = (
+				E3BF312DBA485FACC892AF17 /* [CP] Check Pods Manifest.lock */,
 				62A1C6152A0E56B000156986 /* Sources */,
 				62A1C6162A0E56B000156986 /* Frameworks */,
 				62A1C6172A0E56B000156986 /* Resources */,
+				54182FD24C7DDEFEDE504EB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,8 +218,8 @@
 			);
 			mainGroup = 62A1C6102A0E56B000156986;
 			packageReferences = (
-				62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit.git" */,
 			);
 			productRefGroup = 62A1C61A2A0E56B000156986 /* Products */;
 			projectDirPath = "";
@@ -215,6 +242,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54182FD24C7DDEFEDE504EB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestaurantPicked/Pods-RestaurantPicked-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestaurantPicked/Pods-RestaurantPicked-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestaurantPicked/Pods-RestaurantPicked-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3BF312DBA485FACC892AF17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RestaurantPicked-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62A1C6152A0E56B000156986 /* Sources */ = {
@@ -370,6 +439,7 @@
 		};
 		62A1C62E2A0E56B000156986 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14C6310D9A97AB3835DDD319 /* Pods-RestaurantPicked.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -397,6 +467,7 @@
 		};
 		62A1C62F2A0E56B000156986 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E1B170F19C2F08351AF141D /* Pods-RestaurantPicked.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,7 +517,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -454,7 +525,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -467,12 +538,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		62A1C6332A0E67E400156986 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 62A1C6322A0E67E400156986 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 		62A1C6362A0E683300156986 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 62A1C6352A0E683300156986 /* XCRemoteSwiftPackageReference "SnapKit.git" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
