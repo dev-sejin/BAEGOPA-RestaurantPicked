@@ -9,6 +9,8 @@ import UIKit
 
 final class RandomViewController: UIViewController {
     
+    private let searchLocationAPI = SearchLocationAPI.shared
+    
     let randomButton = RandomButton()
 
     override func viewDidLoad() {
@@ -25,7 +27,17 @@ final class RandomViewController: UIViewController {
 
     // SearchLocationAPI 테스트용
     func testSearchLocationAPI() {
-        SearchLocationAPI.shared.requestLocation(searchQuery: "서울특별시 강남 맛집") { print($0) }
+        searchLocationAPI.requestLocation(searchQuery: "서울특별시 강남 맛집") { _ in
+            guard let result = self.searchLocationAPI.getSearchResult(),
+                  let random = self.searchLocationAPI.getRandomLocation(),
+                  let coordinate = self.searchLocationAPI.getRandomLocationCoordinate(),
+                  let url = self.searchLocationAPI.getRandomLocationWebViewURLString()
+            else { return }
+            print("검색 결과: \(result)\n----------")
+            print("랜덤장소: \(random.title)\n----------")
+            print("랜덤 장소 좌표: \(coordinate)\n----------")
+            print("WebView URL: \(url)\n----------")
+        }
     }
     
     private func setupButton() {

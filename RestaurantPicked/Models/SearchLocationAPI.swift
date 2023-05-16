@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import CoreLocation
 import Alamofire
+import NMapsMap
 
 /// 네이버 지역 검색 API 관리 클래스입니다.
 final class SearchLocationAPI {
@@ -41,6 +43,9 @@ final class SearchLocationAPI {
     /// JSON 타입 반환 요청 기본 URL
     private let baseURL = "https://openapi.naver.com/v1/search/local.json"
     
+    /// 네이버 검색 WebView 기본 URL
+    private let webViewURL = "https://m.search.naver.com/search.naver?sm=tab_hty.top&where=m&query="
+    
     /// 기본 파라미터 적용 URL
     private var paramURL: String {
         
@@ -57,9 +62,15 @@ final class SearchLocationAPI {
         return "\(baseURL)?display=\(display)&start=\(start)&sort=\(sort)&query="
     }
     
+    /// 네이버 지역 검색 결과
+    private var searchResult: SearchLocation?
+    
+    /// 네이버 지역 검색 랜덤 장소
+    private var randomLocation: LocationItem?
     
     
-    // MARK: - Method
+    
+    // MARK: - Networking Method
     
     /// Request 요청 객체를 생성 후 반환합니다.
     ///
@@ -99,6 +110,7 @@ final class SearchLocationAPI {
                     /// 네트워킹 성공
                 case .success(let searchLocation):
                     print("Status: \(statusCode) - SearchLocationAPI 네트워킹에 성공했습니다.")
+                    self.searchResult = searchLocation
                     completion(searchLocation)
                     
                     /// 네트워킹 실패
@@ -107,5 +119,58 @@ final class SearchLocationAPI {
                     print(error.localizedDescription)
                 }
             }
+    }
+    
+    
+    
+    // MARK: - CRUD Method
+    
+    /// 네이버 지역 검색 결과를 반환합니다.
+    func getSearchResult() -> SearchLocation? {
+        guard let result = searchResult else {
+            print("네이버 지역 검색 결과 반환에 실패했습니다.")
+            return nil }
+        return result
+    }
+    
+    /// 네이버 지역 검색 결과를 이용해 랜덤 장소를 반환합니다.
+    func getRandomLocation() -> LocationItem? {
+        guard let items = searchResult?.items else {
+            print("랜덤 장소 반환에 실패했습니다.")
+            return nil }
+        
+        /// 랜덤 장소 생성
+        let randomNumber = Int.random(in: 0..<items.count)
+        let randomItem = items[randomNumber]
+        randomLocation = randomItem
+        return randomItem
+    }
+    
+    /// 네이버 지역 검색 결과를 이용해 구한 랜덤 장소의
+    /// 웹 검색 결과 URL 주소를 반환합니다.
+    func getRandomLocationWebViewURLString() -> String? {
+        guard let title = randomLocation?.title else {
+            print("랜덤 장소의 웹 검색 결과 URL 주소 반환에 실패했습니다.")
+            return nil
+        }
+        return webViewURL + title.safeURL
+    }
+    
+    /// 네이버 지역 검색 결과를 이용해 구한 랜덤 장소의
+    /// TM128 좌표계를 변환 후 WGS84(위도, 경도) 좌표계로 반환합니다.
+    func getRandomLocationCoordinate() -> CLLocationCoordinate2D? {
+        guard let item = randomLocation,
+              let x = Double(item.mapx),
+              let y = Double(item.mapy) else {
+            print("랜덤 장소의 좌표계 반환에 실패했습니다.")
+            return nil
+        }
+        
+        /// tm128 객체 생성
+        let tm128 = NMGTm128(x: x, y: y)
+        
+        /// WGS84(위도, 경도) 객체 생성 및 반환
+        let wgs84 = tm128.toLatLng()
+        return CLLocationCoordinate2D(latitude: wgs84.lat, longitude: wgs84.lng)
     }
 }
