@@ -29,9 +29,9 @@ final class RandomViewController: UIViewController {
     func testSearchLocationAPI() {
         searchLocationAPI.requestLocation(searchQuery: "서울특별시 강남 맛집") { _ in
             guard let result = self.searchLocationAPI.getSearchResult(),
-                  let random = self.searchLocationAPI.getRandomPlace(),
-                  let coordinate = self.searchLocationAPI.getSearchResultCoordinate(),
-                  let url = self.searchLocationAPI.getRandomplaceWebViewURLString()
+                  let random = self.searchLocationAPI.getRandomLocation(),
+                  let coordinate = self.searchLocationAPI.getRandomLocationCoordinate(),
+                  let url = self.searchLocationAPI.getRandomLocationWebViewURLString()
             else { return }
             print("검색 결과: \(result)\n----------")
             print("랜덤장소: \(random.title)\n----------")
