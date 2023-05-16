@@ -60,6 +60,9 @@ final class SearchLocationAPI {
     /// 네이버 지역 검색 결과
     private var searchResult: SearchLocation?
     
+    /// 네이버 지역 검색 랜덤 장소
+    private var randomLocation: LocationItem?
+    
     
     
     // MARK: - Networking Method
@@ -119,7 +122,19 @@ final class SearchLocationAPI {
     
     /// 네이버 지역 검색 결과를 반환합니다.
     func getSearchResult() -> SearchLocation? {
-        guard let result = searchResult else { return nil }
+        guard let result = searchResult else {
+            print("네이버 지역 검색 결과 반환에 실패했습니다.")
+            return nil }
         return result
+    }
+    
+    /// 네이버 지역 검색 결과를 이용해 랜덤 장소를 반환합니다.
+    func getRandomPlace() -> LocationItem? {
+        guard let items = searchResult?.items else {
+            return nil }
+        let randomNumber = Int.random(in: 0..<items.count)
+        let randomItem = items[randomNumber]
+        randomLocation = randomItem
+        return randomItem
     }
 }
