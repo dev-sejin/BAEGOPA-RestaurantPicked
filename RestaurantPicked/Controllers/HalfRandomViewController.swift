@@ -39,6 +39,8 @@ class HalfRandomViewController: UIViewController {
     
     @objc private func buttonTapped(_ sender: HalfRandomButton) {
         let restaurantDetailView = RestaurantDetailViewController()
+        
+        //디테일뷰에 카테고리 전달
         restaurantDetailView.selectedCategory = sender.titleLabel?.text
         self.navigationController?.pushViewController(restaurantDetailView, animated: true)
     }

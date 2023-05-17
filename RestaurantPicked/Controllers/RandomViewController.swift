@@ -9,7 +9,8 @@ import UIKit
 
 final class RandomViewController: UIViewController {
     
-    private let searchLocationAPI = SearchLocationAPI.shared
+//    private let searchLocationAPI = SearchLocationAPI.shared
+//    private let reverseGeocodingAPI = ReverseGeocodingAPI.shared
     
     let randomButton = RandomButton()
 
@@ -17,38 +18,35 @@ final class RandomViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
-        testSearchLocationAPI()
-        testReverseGeocodingAPI()
-        
         setupButton()
         setupButtonConstraints()
         
     }
 
     // SearchLocationAPI 테스트용
-    func testSearchLocationAPI() {
-        searchLocationAPI.requestLocation(searchQuery: "서울특별시 강남 맛집") { _ in
-            guard let result = self.searchLocationAPI.getSearchResult(),
-                  let random = self.searchLocationAPI.getRandomLocation(),
-                  let coordinate = self.searchLocationAPI.getRandomLocationCoordinate(),
-                  let url = self.searchLocationAPI.getRandomLocationWebViewURLString()
-            else { return }
-            print("검색 결과: \(result)\n----------")
-            print("랜덤장소: \(random.title)\n----------")
-            print("랜덤 장소 좌표: \(coordinate)\n----------")
-            print("WebView URL: \(url)\n----------")
-        }
-    }
+//    func testSearchLocationAPI() {
+//        searchLocationAPI.requestLocation(searchQuery: "서울특별시 강남 맛집") { _ in
+//            guard let result = self.searchLocationAPI.getSearchResult(),
+//                  let random = self.searchLocationAPI.getRandomLocation(),
+//                  let coordinate = self.searchLocationAPI.getRandomLocationCoordinate(),
+//                  let url = self.searchLocationAPI.getRandomLocationWebViewURLString()
+//            else { return }
+//            print("검색 결과: \(result)\n----------")
+//            print("랜덤장소: \(random.title)\n----------")
+//            print("랜덤 장소 좌표: \(coordinate)\n----------")
+//            print("WebView URL: \(url)\n----------")
+//        }
+//    }
     
     // ReverseGeocodingAPI 테스트용
-    func testReverseGeocodingAPI() {
-        ReverseGeocodingAPI.shared.getDataFromAPI(coord: "127,36") {
-            
-            //(순서대로) 시 군 구
-            let geoCoding = "\($0.results[0].region.area1.name) \($0.results[0].region.area2.name) \($0.results[0].region.area3.name)"
-            print(geoCoding)
-        }
-    }
+//    func testReverseGeocodingAPI() {
+//        ReverseGeocodingAPI.shared.getDataFromAPI(coord: "127,36") {
+//
+//            //(순서대로) 시 군 구
+//            let geoCoding = "\($0.results[0].region.area1.name) \($0.results[0].region.area2.name) \($0.results[0].region.area3.name)"
+//            print(geoCoding)
+//        }
+//    }
     
     private func setupButton() {
         self.view.addSubview(randomButton)
@@ -59,6 +57,9 @@ final class RandomViewController: UIViewController {
     
     @objc private func buttonTapped() {
         let restaurantDetailView = RestaurantDetailViewController()
+        
+        //디테일 뷰에 카테고리 전달
+        restaurantDetailView.selectedCategory = "RANDOM"
         self.navigationController?.pushViewController(restaurantDetailView, animated: true)
     }
     
