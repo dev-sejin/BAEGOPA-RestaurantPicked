@@ -1,29 +1,22 @@
 //
-//  RestaurantDetailViewController.swift
+//  InfoViewController.swift
 //  RestaurantPicked
 //
-//  Created by Sejin on 2023/05/15.
+//  Created by Doyoung An on 2023/05/18.
 //
 
 import UIKit
-import SnapKit
-import CoreLocation
-import MapKit
 
-
-class RestaurantDetailViewController: UIViewController {
+class SettingViewController: UIViewController {
     
     // MARK: - Properties
-    
-    var tappedButtonTitle: String = ""
-    
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
-        print(tappedButtonTitle)
+        
+        view.backgroundColor = .blue
     }
     
     // 화면이 나타날때 tabbar 숨기기
@@ -41,7 +34,6 @@ class RestaurantDetailViewController: UIViewController {
     }
     
     
-    
     // MARK: - Helpers Functions
     
     // MARK: - Selectors
@@ -53,6 +45,4 @@ class RestaurantDetailViewController: UIViewController {
 
 
 // MARK: - Extension
-
-
 

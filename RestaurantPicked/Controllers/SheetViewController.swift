@@ -19,20 +19,38 @@ class SheetViewController: UIViewController {
         view = sheetView
     }
     
+    // web view url test
+    private var webViewURL = SearchLocationAPI.shared.getRandomLocationWebViewURLString()
+    
+    
     
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+        loadView()
     }
     
     
     // MARK: - Helpers Functions
     
-    
+    // web view load 메서드 (
+    private func loadWebView() {
+        
+        guard let url = webViewURL else {
+            print("error: webViewURL optional binding failed")
+            return
+        }
+        
+        guard let urlStruct = URL(string: url) else {
+            print("error: fialed urlStruct")
+            return
+        }
+        
+        let urlRequest = URLRequest(url: urlStruct)
+        sheetView.webView.load(urlRequest)
+        
+    }
     
     
     

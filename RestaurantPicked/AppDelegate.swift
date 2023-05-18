@@ -13,7 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // 네비바 설정
+        let apperance = UINavigationBarAppearance()
+        apperance.configureWithDefaultBackground()  // 네비게이션바 불투명으로 설정
+        // navigationBar apperance 설정
+        UINavigationBar.appearance().standardAppearance = apperance
+        // 기본 색상 및 외형 설정
+        apperance.backgroundColor = .white  // 네비게이션바 색상 설정
+        UINavigationBar.appearance().tintColor = .darkGray  // 네비게이션바 tint색생 설정
+        UINavigationBar.appearance().shadowImage = UIImage()  // 구분선 제거
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        // title 설정
+        UINavigationBar.appearance().prefersLargeTitles = true  // large title
+        apperance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.darkGray]  // title 색상 설정
+        apperance.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.darkGray]  // title 색상 설정
+        
         return true
     }
 
