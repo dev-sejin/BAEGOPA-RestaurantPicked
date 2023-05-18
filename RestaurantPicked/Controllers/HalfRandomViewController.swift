@@ -9,84 +9,69 @@ import UIKit
 
 class HalfRandomViewController: UIViewController {
     
+    // MARK: - Properties
     
-    let category: [String] = ["KOREAN", "CHINESE", "JAPANESE", "WESTERN", "CAFE", "BAR"]
-    var buttons = [String: HalfRandomButton]()
+    // view 생성
+    private let halfRandomView = HalfRandomView()
+    // view 교체
+    override func loadView() {
+        view = halfRandomView
+    }
+
     
-    let buttonSize: CGFloat = 127
-    let sideMargin: CGFloat = 36
-    let gap: CGFloat = 100
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = .white
-        
-        setupButtons()
-        setupButtonConstraints()
+        configureButtonAction()
+        configureNaiBar()
     }
     
     
-    private func setupButtons() {
-        for categoryName in category {
-            let button = HalfRandomButton()
-            button.setTitle(categoryName, for: .normal)
-            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
-            self.view.addSubview(button)
-            buttons[categoryName] = button
+    // MARK: - Helpers Functions
+    
+    // button을 작동하기 위해서 addTarget 설정
+    private func configureButtonAction() {
+        let buttons = [halfRandomView.koreanButton, halfRandomView.chinessButton, halfRandomView.japaneseButton, halfRandomView.westernButton, halfRandomView.cafeButton, halfRandomView.barButton]
+        buttons.forEach { button in
+            button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         }
     }
     
-    @objc private func buttonTapped(_ sender: HalfRandomButton) {
-        let restaurantDetailView = RestaurantDetailViewController()
-        restaurantDetailView.selectedCategory = sender.titleLabel?.text
-        self.navigationController?.pushViewController(restaurantDetailView, animated: true)
+    
+    private func configureNaiBar() {
+        title = "Random Restaurant"
+        // settingBarButtonItem 생성 및 설정
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.2.badge.gearshape"), style: .plain, target: self, action: #selector(settingButtonTapped))
     }
     
     
-    private func setupButtonConstraints() {
-        if let koreanBtn = buttons["KOREAN"],
-           let chineseBtn = buttons["CHINESE"],
-           let japaneseBtn = buttons["JAPANESE"],
-           let westernBtn = buttons["WESTERN"],
-           let cafeBtn = buttons["CAFE"],
-           let barBtn = buttons["BAR"] {
-            
-            koreanBtn.snp.makeConstraints { make in
-                make.centerX.equalToSuperview().multipliedBy(0.5).offset(sideMargin / 2)
-                make.centerY.equalToSuperview().offset(-(buttonSize / 2 + gap))
-                make.width.height.equalTo(buttonSize)
-            }
-            
-            chineseBtn.snp.makeConstraints { make in
-                make.centerX.equalToSuperview().multipliedBy(1.5).offset(-sideMargin / 2)
-                make.centerY.equalToSuperview().offset(-(buttonSize / 2 + gap))
-                make.width.height.equalTo(buttonSize)
-            }
-            
-            japaneseBtn.snp.makeConstraints { make in
-                make.centerX.equalToSuperview().multipliedBy(0.5).offset(sideMargin / 2)
-                make.centerY.equalToSuperview()
-                make.width.height.equalTo(buttonSize)
-            }
-            
-            westernBtn.snp.makeConstraints { make in
-                make.centerX.equalToSuperview().multipliedBy(1.5).offset(-sideMargin / 2)
-                make.centerY.equalToSuperview()
-                make.width.height.equalTo(buttonSize)
-            }
-            
-            cafeBtn.snp.makeConstraints { make in
-                make.centerX.equalToSuperview().multipliedBy(0.5).offset(sideMargin / 2)
-                make.centerY.equalToSuperview().offset(buttonSize / 2 + gap)
-                make.width.height.equalTo(buttonSize)
-            }
-            
-            barBtn.snp.makeConstraints { make in
-                make.centerX.equalToSuperview().multipliedBy(1.5).offset(-sideMargin / 2)
-                make.centerY.equalToSuperview().offset(buttonSize / 2 + gap)
-                make.width.height.equalTo(buttonSize)
-            }
+    // MARK: - Selectors
+    
+    @objc func settingButtonTapped() {
+        // 디테일뷰컨 생성
+        let controller = SettingViewController()
+        // 네비게이션컨트롤러를 이용한 화면이동
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
+    @objc func buttonTapped(_ sender: UIButton) {
+        
+        let controller = RestaurantDetailViewController()
+        // 눌린 버튼 타이틀 RestaurantDetailViewController로 넘겨 주기
+        if let title = sender.currentTitle {
+            controller.tappedButtonTitle = title
         }
+        
+        // 네비게이션컨트롤러를 이용한 또다른 화면이동 코드방식
+        show(controller, sender: nil)
     }
+    
+    
+    // MARK: - Actions
+    
+    // MARK: - Extension
+
+    
 }

@@ -2,12 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>위치정보 권한이 필요합니다.</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>위치정보 권한이 필요합니다.</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>위치정보 권한이 필요합니다.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>사용자 주변의 식당 정보를 검색하기 위하여 현재의 위치정보를 사용하게 됩니다.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>사용자 주변의 식당 정보를 검색하기 위하여 현재의 위치정보를 사용하게 됩니다.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>사용자 주변의 식당 정보를 검색하기 위하여 현재의 위치정보를 사용하게 됩니다.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

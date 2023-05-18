@@ -16,12 +16,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        window = UIWindow(windowScene: windowScene)
+        // 탭바컨트롤러의 생성
+        let tabBarVC = UITabBarController()
+        // 네비컨트롤러 생성
+        let randomVC = UINavigationController(rootViewController: RandomViewController())
+        let halfRandomVC = UINavigationController(rootViewController: HalfRandomViewController())
         
-        let window = UIWindow(windowScene: windowScene)
-        let tabBarVC = MainTabBarController()
-        window.rootViewController = tabBarVC
-        self.window = window
-        window.makeKeyAndVisible()
+        // 탭바 타이틀 설정
+        randomVC.title = "Random"
+        halfRandomVC.title = "Category Random"
+        
+        // 탭바로 사용하기 위한 뷰 컨트롤러들 설정
+        tabBarVC.setViewControllers([randomVC, halfRandomVC], animated: true)
+        
+        // 프리젠테이션될 화면 스타일 설정
+        tabBarVC.modalPresentationStyle = .fullScreen
+        
+        // 탭바의 백그라운드색상 설정
+        tabBarVC.tabBar.backgroundColor = .white
+        
+        // 탭바 이미지 설정 (이미지는 애플이 제공하는 것으로 사용)
+        guard let items = tabBarVC.tabBar.items else { return }
+        items[0].image = UIImage(systemName: "fork.knife")
+        items[1].image = UIImage(systemName: "globe.asia.australia")
+        
+        // 탭바 틴트색상 설정
+        tabBarVC.tabBar.tintColor = .black  // 선택된 tabbar 색상
+        tabBarVC.tabBar.unselectedItemTintColor = .gray  // 선택되지 않은 tabbar 색상
+        
+        // 기본루트뷰를 탭바컨트롤러로 설정
+        window?.rootViewController = tabBarVC
+        
+        // window를 표시하고 Key window로 설정(window를 앞으로 배치)
+        // key window: window가 여러개 존재할 때, 가장 앞쪽에 배치된 window를 `key window`라고 지칭
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
