@@ -6,7 +6,9 @@
 //
 
 
-// UIPresentationController 관련
+import UIKit
 
-
-import Foundation
+class SettingView: UIView {
+    
+    
+}

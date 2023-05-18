@@ -6,69 +6,75 @@
 //
 
 import UIKit
+import CoreLocation
 
 final class RandomViewController: UIViewController {
     
-    private let searchLocationAPI = SearchLocationAPI.shared
+    // MARK: - Properties
     
-    let randomButton = RandomButton()
-
+    // view 생성
+    private let randomView = RandomView()
+    // view 교체
+    override func loadView() {
+        view = randomView
+    }
+    
+    // CLLocationManager
+    private let locationManager = CLLocationManager()
+    
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
-        
-        testSearchLocationAPI()
-        testReverseGeocodingAPI()
-        
-        setupButton()
-        setupButtonConstraints()
-        
-    }
-
-    // SearchLocationAPI 테스트용
-    func testSearchLocationAPI() {
-        searchLocationAPI.requestLocation(searchQuery: "서울특별시 강남 맛집") { _ in
-            guard let result = self.searchLocationAPI.getSearchResult(),
-                  let random = self.searchLocationAPI.getRandomLocation(),
-                  let coordinate = self.searchLocationAPI.getRandomLocationCoordinate(),
-                  let url = self.searchLocationAPI.getRandomLocationWebViewURLString()
-            else { return }
-            print("검색 결과: \(result)\n----------")
-            print("랜덤장소: \(random.title)\n----------")
-            print("랜덤 장소 좌표: \(coordinate)\n----------")
-            print("WebView URL: \(url)\n----------")
-        }
-    }
-    
-    // ReverseGeocodingAPI 테스트용
-    func testReverseGeocodingAPI() {
-        ReverseGeocodingAPI.shared.getDataFromAPI(coord: "127,36") {
-            let geoCoding = "\($0.results[0].region.area1.name) \($0.results[0].region.area2.name) \($0.results[0].region.area3.name)"
-            print(geoCoding)
-        }
-    }
-    
-    private func setupButton() {
-        self.view.addSubview(randomButton)
-        
-        randomButton.setTitle("RANDOM", for: .normal)
-        randomButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-    }
-    
-    @objc private func buttonTapped() {
-        let restaurantDetailView = RestaurantDetailViewController()
-        self.navigationController?.pushViewController(restaurantDetailView, animated: true)
+        locationManager.requestWhenInUseAuthorization()  // 민감한 위치정보를 얻기 위해서는 사용자의 허락 요청 메서드
+        configuerButtonAction()
+        configureNaiBar()
     }
     
     
-    private func setupButtonConstraints() {
-        randomButton.snp.makeConstraints { make in
-            let buttonSize: CGFloat = 180.0
-            make.width.height.equalTo(buttonSize)
-            make.center.equalToSuperview()
-        }
+    // MARK: - Helpers Functions
+    
+    // button을 작동하기 위해서 addTarget 설정 ⭐️⭐️⭐️
+    // 버튼의 실행을 위한 addTarget 메서드는 ViewController에만 존재 하기 때문에 UIView에서 직접 설정이 불가능 하다.
+    private func configuerButtonAction() {
+        randomView.randomButton.addTarget(self, action: #selector(randomButtonTapped), for: .touchUpInside)
     }
+    
+    
+    // UI 관련 설정들
+    private func configureNaiBar() {
+        title = "Category Random"
+        // settingBarButtonItem 생성 및 설정
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.2.badge.gearshape"), style: .plain, target: self, action: #selector(settingButtonTapped))
+    }
+    
+    
+    // MARK: - Selectors
+    
+    @objc func settingButtonTapped() {
+        // 디테일뷰컨 생성
+        let controller = SettingViewController()
+        // 네비게이션컨트롤러를 이용한 화면이동
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
+    @objc func randomButtonTapped() {
+//        print("DEBUG: randombutton")
+        let controller = RestaurantDetailViewController()
+        // 네비게이션컨트롤러를 이용한 또다른 화면이동 코드방식
+        show(controller, sender: nil)
+    }
+    
+    
+    // MARK: - Actions
+    
+    
+    
 }
 
-// alamofire
-// snapkit
+
+// MARK: - Extension
+
+
