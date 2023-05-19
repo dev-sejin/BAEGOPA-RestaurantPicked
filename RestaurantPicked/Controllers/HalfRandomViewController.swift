@@ -11,6 +11,7 @@ class HalfRandomViewController: UIViewController {
     
     // MARK: - Properties
     
+    // UI 관련된 변수들
     // view 생성
     private let halfRandomView = HalfRandomView()
     // view 교체
@@ -38,7 +39,7 @@ class HalfRandomViewController: UIViewController {
         }
     }
     
-    
+    // 네비바 설정
     private func configureNaiBar() {
         title = "Random Restaurant"
         // settingBarButtonItem 생성 및 설정
@@ -49,7 +50,6 @@ class HalfRandomViewController: UIViewController {
     // MARK: - Selectors
     
     @objc func settingButtonTapped() {
-        // 디테일뷰컨 생성
         let controller = SettingViewController()
         // 네비게이션컨트롤러를 이용한 화면이동
         navigationController?.pushViewController(controller, animated: true)
@@ -57,7 +57,6 @@ class HalfRandomViewController: UIViewController {
     
     
     @objc func buttonTapped(_ sender: UIButton) {
-        
         let controller = RestaurantDetailViewController()
         // 눌린 버튼 타이틀 RestaurantDetailViewController로 넘겨 주기
         if let title = sender.currentTitle {
@@ -67,11 +66,5 @@ class HalfRandomViewController: UIViewController {
         // 네비게이션컨트롤러를 이용한 또다른 화면이동 코드방식
         show(controller, sender: nil)
     }
-    
-    
-    // MARK: - Actions
-    
-    // MARK: - Extension
-
     
 }

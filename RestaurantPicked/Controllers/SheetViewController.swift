@@ -12,48 +12,48 @@ class SheetViewController: UIViewController {
     
     // MARK: - Properties
     
-    // custom view 생성 (Views 폴더 -> SheetView: UIView 파일)
+    // UI 관련된 변수들
+    // view 생성
     private let sheetView = SheetView()
     // view 교체
     override func loadView() {
         view = sheetView
     }
     
-    // web view url test
-    private var webViewURL = SearchLocationAPI.shared.getRandomLocationWebViewURLString()
-    
+    // 데이터 전달 관련 변수들
+    // webViewURL 전달 받을 변수
+    var webViewURL: String = "" {
+        didSet {
+            print(webViewURL)
+        }
+    }
     
     
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadView()
+        loadWebView(webViewURL)
     }
     
     
     // MARK: - Helpers Functions
     
-    // web view load 메서드 (
-    private func loadWebView() {
+    // 웹뷰 로드 설정
+    private func loadWebView(_ url: String) {
         
-        guard let url = webViewURL else {
-            print("error: webViewURL optional binding failed")
+        guard let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            print("DEBUGE: encodedString")
             return
         }
         
-        guard let urlStruct = URL(string: url) else {
-            print("error: fialed urlStruct")
+        guard let urlStruct = URL(string: encodedString) else {
+            print("DEBUGE: fialed urlStruct")
             return
         }
         
         let urlRequest = URLRequest(url: urlStruct)
         sheetView.webView.load(urlRequest)
-        
     }
-    
-    
-    
-    
     
 }

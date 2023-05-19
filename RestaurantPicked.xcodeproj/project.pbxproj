@@ -24,7 +24,6 @@
 		62A1C64B2A0E69C800156986 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C64A2A0E69C800156986 /* RestaurantDetailView.swift */; };
 		62A1C64D2A0E69E200156986 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C64C2A0E69E200156986 /* SettingView.swift */; };
 		62A1C6502A0E6A2B00156986 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C64F2A0E6A2B00156986 /* Extension.swift */; };
-		62C6BAA12A11E93200957584 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6BAA02A11E93200957584 /* MainTabBarController.swift */; };
 		62C6BAA32A11E97600957584 /* HalfRandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6BAA22A11E97600957584 /* HalfRandomViewController.swift */; };
 		62C6BAA52A11E98B00957584 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6BAA42A11E98B00957584 /* RestaurantDetailViewController.swift */; };
 		7F6154092A15D77000CE6E91 /* SelectRestaurantAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6154082A15D77000CE6E91 /* SelectRestaurantAnnotaion.swift */; };
@@ -57,7 +56,6 @@
 		62A1C64A2A0E69C800156986 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		62A1C64C2A0E69E200156986 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		62A1C64F2A0E6A2B00156986 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		62C6BAA02A11E93200957584 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		62C6BAA22A11E97600957584 /* HalfRandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfRandomViewController.swift; sourceTree = "<group>"; };
 		62C6BAA42A11E98B00957584 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		7F6154082A15D77000CE6E91 /* SelectRestaurantAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRestaurantAnnotaion.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 		62A1C63B2A0E68CF00156986 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				62C6BAA02A11E93200957584 /* MainTabBarController.swift */,
 				62A1C6202A0E56B000156986 /* RandomViewController.swift */,
 				62C6BAA22A11E97600957584 /* HalfRandomViewController.swift */,
 				62C6BAA42A11E98B00957584 /* RestaurantDetailViewController.swift */,
@@ -329,7 +326,6 @@
 				7F6154092A15D77000CE6E91 /* SelectRestaurantAnnotaion.swift in Sources */,
 				7F6154102A15E5B300CE6E91 /* SettingViewController.swift in Sources */,
 				62A1C63F2A0E694600156986 /* SearchLocationAPI.swift in Sources */,
-				62C6BAA12A11E93200957584 /* MainTabBarController.swift in Sources */,
 				62A1C6502A0E6A2B00156986 /* Extension.swift in Sources */,
 				7F87684D2A136E7700066A50 /* SheetViewController.swift in Sources */,
 				62A1C61F2A0E56B000156986 /* SceneDelegate.swift in Sources */,

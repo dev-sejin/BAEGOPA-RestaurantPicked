@@ -12,6 +12,7 @@ final class RandomViewController: UIViewController {
     
     // MARK: - Properties
     
+    // UI 관련된 변수들
     // view 생성
     private let randomView = RandomView()
     // view 교체
@@ -19,6 +20,7 @@ final class RandomViewController: UIViewController {
         view = randomView
     }
     
+    // 위치 관련 변수들
     // CLLocationManager
     private let locationManager = CLLocationManager()
     
@@ -35,14 +37,13 @@ final class RandomViewController: UIViewController {
     
     // MARK: - Helpers Functions
     
-    // button을 작동하기 위해서 addTarget 설정 ⭐️⭐️⭐️
+    // button을 작동하기 위해서 addTarget 설정
     // 버튼의 실행을 위한 addTarget 메서드는 ViewController에만 존재 하기 때문에 UIView에서 직접 설정이 불가능 하다.
     private func configuerButtonAction() {
         randomView.randomButton.addTarget(self, action: #selector(randomButtonTapped), for: .touchUpInside)
     }
     
-    
-    // UI 관련 설정들
+    // 네비바 설정
     private func configureNaiBar() {
         title = "Category Random"
         // settingBarButtonItem 생성 및 설정
@@ -53,7 +54,6 @@ final class RandomViewController: UIViewController {
     // MARK: - Selectors
     
     @objc func settingButtonTapped() {
-        // 디테일뷰컨 생성
         let controller = SettingViewController()
         // 네비게이션컨트롤러를 이용한 화면이동
         navigationController?.pushViewController(controller, animated: true)
@@ -67,14 +67,4 @@ final class RandomViewController: UIViewController {
         show(controller, sender: nil)
     }
     
-    
-    // MARK: - Actions
-    
-    
-    
 }
-
-
-// MARK: - Extension
-
-
