@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class SheetViewController: UIViewController {
+final class SheetViewController: UIViewController {
     
     // MARK: - Properties
     

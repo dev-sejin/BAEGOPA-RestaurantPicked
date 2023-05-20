@@ -60,7 +60,7 @@ class RestaurantDetailView: UIView {
             restaurantNameLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             restaurantNameLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
             restaurantNameLabel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
-            restaurantNameLabel.heightAnchor.constraint(equalToConstant: ("1" as! NSString).size(withAttributes: [NSAttributedString.Key.font : restaurantNameLabel.font]).height), // 일단 테스트용
+            restaurantNameLabel.heightAnchor.constraint(equalToConstant: ("1" as NSString).size(withAttributes: [NSAttributedString.Key.font : restaurantNameLabel.font as Any]).height), // 일단 테스트용
             
             mapView.topAnchor.constraint(equalTo: restaurantNameLabel.bottomAnchor, constant: 10),
             mapView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),

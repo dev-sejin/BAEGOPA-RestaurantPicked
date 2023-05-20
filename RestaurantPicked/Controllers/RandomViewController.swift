@@ -34,6 +34,11 @@ final class RandomViewController: UIViewController {
         configureNaiBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.largeTitleDisplayMode = .always
+    }
+    
     
     // MARK: - Helpers Functions
     

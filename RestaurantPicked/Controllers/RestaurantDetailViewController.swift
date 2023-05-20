@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class RestaurantDetailViewController: UIViewController {
+final class RestaurantDetailViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -61,7 +61,7 @@ class RestaurantDetailViewController: UIViewController {
     // 네비바 설정
     private func configureNaviBar() {
         title = "식당 상세정보"
-        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     // 위지정보 설정
@@ -168,7 +168,7 @@ extension RestaurantDetailViewController: MKMapViewDelegate {
         guard !annotation.isKind(of: MKUserLocation.self) else { return nil }
         
         // annotaion 타입을 확인하여 해당 없을 경우 기본 annotaion view 적용되도록
-        guard let annotaion = annotation as? SelectRestaurantAnnotaion else { return nil }
+        guard annotation is SelectRestaurantAnnotaion else { return nil }
         //
         let identifier = "RandomRestaurant"
         var view: MKMarkerAnnotationView
@@ -196,7 +196,7 @@ extension RestaurantDetailViewController: MKMapViewDelegate {
     // annotation rightCalloutAccessoryView Button 클릭시 콜
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
-        guard let selectRestaurantAnnotaion = view.annotation as? SelectRestaurantAnnotaion else { return }
+        guard view.annotation is SelectRestaurantAnnotaion else { return }
         
         // 경로 팝업
 //        let lanuchOtions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]

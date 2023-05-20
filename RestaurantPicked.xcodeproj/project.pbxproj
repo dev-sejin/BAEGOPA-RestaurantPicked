@@ -472,9 +472,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WTAASZG6Q6;
+				DEVELOPMENT_TEAM = 9XG4S4XZWN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantPicked/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자 주변의 식당 정보를 검색하기 위하여 현재의 위치정보를 사용하게 됩니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "사용자 주변의 식당 정보를 검색하기 위하여 현재의 위치정보를 사용하게 됩니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자 주변의 식당 정보를 검색하기 위하여 현재의 위치정보를 사용하게 됩니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -485,7 +488,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.baegopa.RestaurantPicked;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkyside.DelegatePatternLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -501,9 +504,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WTAASZG6Q6;
+				DEVELOPMENT_TEAM = 9XG4S4XZWN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantPicked/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자 주변의 식당 정보를 검색하기 위하여 현재의 위치정보를 사용하게 됩니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "사용자 주변의 식당 정보를 검색하기 위하여 현재의 위치정보를 사용하게 됩니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자 주변의 식당 정보를 검색하기 위하여 현재의 위치정보를 사용하게 됩니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -514,7 +520,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.baegopa.RestaurantPicked;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinkyside.DelegatePatternLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

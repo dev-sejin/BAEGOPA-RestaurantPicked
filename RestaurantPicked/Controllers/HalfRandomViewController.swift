@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HalfRandomViewController: UIViewController {
+final class HalfRandomViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -26,6 +26,11 @@ class HalfRandomViewController: UIViewController {
         super.viewDidLoad()
         configureButtonAction()
         configureNaiBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.largeTitleDisplayMode = .always
     }
     
     
