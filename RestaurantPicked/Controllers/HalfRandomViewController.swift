@@ -1,36 +1,30 @@
 //
-//  ViewController.swift
+//  HalfRandomViewController.swift
 //  RestaurantPicked
 //
-//  Created by Sejin on 2023/05/12.
+//  Created by Sejin on 2023/05/15.
 //
 
 import UIKit
-import CoreLocation
 
-final class RandomViewController: UIViewController {
+final class HalfRandomViewController: UIViewController {
     
     // MARK: - Properties
     
     // UI 관련된 변수들
     // view 생성
-    private let randomView = RandomView()
+    private let halfRandomView = HalfRandomView()
     // view 교체
     override func loadView() {
-        view = randomView
+        view = halfRandomView
     }
-    
-    // 위치 관련 변수들
-    // CLLocationManager
-    private let locationManager = CLLocationManager()
-    
+
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.requestWhenInUseAuthorization()  // 민감한 위치정보를 얻기 위해서는 사용자의 허락 요청 메서드
-        configuerButtonAction()
+        configureButtonAction()
         configureNaiBar()
     }
     
@@ -43,14 +37,16 @@ final class RandomViewController: UIViewController {
     // MARK: - Helpers Functions
     
     // button을 작동하기 위해서 addTarget 설정
-    // 버튼의 실행을 위한 addTarget 메서드는 ViewController에만 존재 하기 때문에 UIView에서 직접 설정이 불가능 하다.
-    private func configuerButtonAction() {
-        randomView.randomButton.addTarget(self, action: #selector(randomButtonTapped), for: .touchUpInside)
+    private func configureButtonAction() {
+        let buttons = [halfRandomView.koreanButton, halfRandomView.chinessButton, halfRandomView.japaneseButton, halfRandomView.westernButton, halfRandomView.cafeButton, halfRandomView.barButton]
+        buttons.forEach { button in
+            button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        }
     }
     
     // 네비바 설정
     private func configureNaiBar() {
-        title = "Category Random"
+        title = "Random Restaurant"
         // settingBarButtonItem 생성 및 설정
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.2.badge.gearshape"), style: .plain, target: self, action: #selector(settingButtonTapped))
     }
@@ -65,9 +61,13 @@ final class RandomViewController: UIViewController {
     }
     
     
-    @objc func randomButtonTapped() {
-//        print("DEBUG: randombutton")
+    @objc func buttonTapped(_ sender: UIButton) {
         let controller = RestaurantDetailViewController()
+        // 눌린 버튼 타이틀 RestaurantDetailViewController로 넘겨 주기
+        if let title = sender.currentTitle {
+            controller.tappedButtonTitle = title
+        }
+        
         // 네비게이션컨트롤러를 이용한 또다른 화면이동 코드방식
         show(controller, sender: nil)
     }
